@@ -1,0 +1,237 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+body {
+  font-family: 'Minecraftia', sans-serif;
+  background: linear-gradient(135deg, #0080ff, #68cfff, #ff665b, #ffea60);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #ffffff88;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0px #fff, 2px 2px 0px #ffcdd2;
+}
+
+.header p {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Light & vibrant cards */
+.card {
+  background: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 2px solid #ffcc80;
+  box-shadow: 0 0 10px rgba(255, 204, 128, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 183, 77, 0.7);
+}
+
+.card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #d84315;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #5d4037;
+}
+
+/* Minecraft green button */
+.buy-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  color: white;
+  padding: 0.75rem 1.2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  box-shadow: 0 0 10px #aeea00aa;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(to right, #b2ff59, #76ff03);
+  box-shadow: 0 0 20px #76ff03bb;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #ffd180;
+  z-index: 2;
+}
+
+/* IGN Input at top */
+.name-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #d84315;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  image-rendering: pixelated;
+  border: 2px solid #ffcc80;
+  background: #fff;
+  flex-shrink: 0;
+  /* keeps avatar size fixed */
+}
+
+#username {
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 140px; /* Prevents overflow */
+  padding: 0.4rem 0.6rem;
+  font-family: 'Minecraftia', monospace;
+  font-size: 1rem;
+  border: 2px solid #ffcc80;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#username:focus {
+  border-color: #ffd54f;
+}
+
+#login-btn {
+  margin-top: 0.5rem;
+  font-family: 'Minecraftia', sans-serif;
+  padding: 0.4rem 0.8rem;
+  background: #ffd54f;
+  color: #5d4037;
+  border: 2px solid #ffb300;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+#login-btn:hover {
+  background: #ffca28;
+}
+
+/* style for the logout button if you want to differentiate */
+#logout-btn {
+  margin-top: 0.5rem;
+  font-family: 'Minecraftia', sans-serif;
+  padding: 0.4rem 0.8rem;
+  background: #e57373;
+  color: #fff;
+  border: 2px solid #d32f2f;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+#logout-btn:hover {
+  background: #ef5350;
+}
+
+
+.name-box input {
+  padding: 0.5rem;
+  font-family: 'Minecraftia', sans-serif;
+  margin-top: 0.25rem;
+  border: 2px solid #ffcc80;
+  border-radius: 5px;
+  background: #fff8e1;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs on sidebar */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tab-btn {
+  font-family: 'Minecraftia', sans-serif;
+  padding: 0.6rem;
+  border: none;
+  background: #ffe082;
+  color: #bf360c;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  text-decoration: none; /* Add this line */
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: #ffd54f;
+  border-left: 4px solid #ff6f00;
+  color: #fff;
+}
+
+/* Content area next to sidebar */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
