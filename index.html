@@ -10,7 +10,13 @@
 </head>
 
 <body>
-  <div class="sidebar">
+  <button id="sidebar-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- Sidebar -->
+  <div class="sidebar sidebar-hidden">
     <div class="name-box">
       <label for="username">Enter IGN:</label>
       <div class="input-row">
@@ -19,9 +25,10 @@
         <input type="text" id="username" placeholder="Steve" />
       </div>
 
-      <button id="login-btn">Login</button>
+      <button id="login-btn">Login</button><br>
       <button id="logout-btn" style="display:none;">Logout</button>
     </div>
+    <!-- Sidebar end -->
 
     <div class="tabs">
       <a href="#" class="tab-btn active">🏠 Home</a>
@@ -34,25 +41,21 @@
     <header class="header">
       <h1>Welcome to the Fortress Network Shop</h1>
       <p>Get your favorite ranks, cosmetics, and more!</p>
-      <p>*This server is not P2W (Pay to Win). So everything you buy in this store is only for Showcase it doesnt provide you with any boost than other players.</p>
+      <p><strong>Note:</strong> This server is not Pay to Win (P2W). All items available in this store are purely
+        cosmetic and for showcase purposes only—they do not provide any gameplay advantages over other players.</p>
     </header>
 
     <main class="main">
       <div class="grid">
         <div class="card">
-          <h2>Custom Ranks For all gamemodes</h2>
-          <p>Unlock rare items and surprises!</p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-        <div class="card">
           <h2>Ranks</h2>
           <p>Boost your status on the server.</p>
-          <a href="#" class="buy-btn">Buy Now</a>
+          <a href="category/Ranks-practice-all-servers-s.html" class="buy-btn">Buy Now</a>
         </div>
         <div class="card">
           <h2>Cosmetics</h2>
           <p>Customize your character.</p>
-          <a href="#" class="buy-btn">Buy Now</a>
+          <a href="category/cosmetics-practice.html" class="buy-btn">Buy Now</a>
 
         </div>
       </div>

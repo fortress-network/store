@@ -49,4 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.setProperty("--x", x);
     document.body.style.setProperty("--y", y);
   });
+
+  document.getElementById('sidebar-toggle').addEventListener('click', function() {
+    const sidebar = document.querySelector('.sidebar');
+    const button = document.getElementById('sidebar-toggle');
+    sidebar.classList.toggle('sidebar-hidden');
+    button.classList.toggle('moved');
+  });
 });
